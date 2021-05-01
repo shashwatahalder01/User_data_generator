@@ -1,0 +1,28 @@
+{
+"first_name":  {
+  "length": 6
+
+},
+  "last_name":  {
+  "length": 4
+
+},
+  "phone_number": {
+    "starts_with": "008",
+    "length": 11
+  },
+
+  "nid": {
+    "length": 12
+  },
+  "username":{
+    "length" : 8
+  },
+  "password": {
+    "min_length":6,
+    "max_length":7,
+    "length": 8
+  }
+
+
+}

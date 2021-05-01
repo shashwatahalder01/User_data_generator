@@ -3,34 +3,133 @@ import sys
 import pathlib
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from tabulate import tabulate
 from utils.ExcelUtils import *
 from randomuser import RandomUser
 import re
 
-user = RandomUser()
 
-user_list = RandomUser.generate_users(100)
-ll = [["First_name", "Last_name", "Email", "Phone_number", "Username", "Password"]]
-for u in user_list:
-    l = []
-    if re.match(r'[\u0600-\u06FF]', u.get_first_name()):
-        l.append(user.get_first_name())
-        l.append(user.get_last_name())
-    else:
-        l.append(u.get_first_name())
-        l.append(u.get_last_name())
-    l.append(u.get_email())
-    l.append(u.get_phone())
-    l.append(u.get_username())
-    l.append(u.get_password())
-    ll.append(l)
 
-# print(ll)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+#
+# user = RandomUser()
+#
+# user_list = RandomUser.generate_users(100)
+# ll = [["First_name", "Last_name", "Email", "Phone_number", "Username", "Password"]]
+# for u in user_list:
+#     l = []
+#     if re.match(r'[\u0600-\u06FF]', u.get_first_name()):
+#         l.append(user.get_first_name())
+#         l.append(user.get_last_name())
+#     else:
+#         l.append(u.get_first_name())
+#         l.append(u.get_last_name())
+#     l.append(u.get_email())
+#     l.append(u.get_phone())
+#     l.append(u.get_username())
+#     l.append(u.get_password())
+#     ll.append(l)
+#
+# # print(ll)
 # print(tabulate(ll))
-
-
-path = pathlib.Path(__file__).parent / "utils/a.xlsx"
-writelistoflist(path, "userdata", ll)
+#
+#
+# path = pathlib.Path(__file__).parent / "utils/a.xlsx"
+# writelistoflist(path, "userdata", ll)
 
 # for u in user_list:
 #     print(u.get_first_name())

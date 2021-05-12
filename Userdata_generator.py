@@ -7,123 +7,134 @@ from tabulate import tabulate
 from utils.ExcelUtils import *
 from randomuser import RandomUser
 import re
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+from faker import Faker
+
+fake = Faker('en')
+l=set()
+for _ in range (0,500000):
+    l.add(fake.name())
+# # print(l)
+# s= set(l)
 #
 #
-# user = RandomUser()
-#
-# user_list = RandomUser.generate_users(100)
-# ll = [["First_name", "Last_name", "Email", "Phone_number", "Username", "Password"]]
-# for u in user_list:
-#     l = []
-#     if re.match(r'[\u0600-\u06FF]', u.get_first_name()):
-#         l.append(user.get_first_name())
-#         l.append(user.get_last_name())
-#     else:
-#         l.append(u.get_first_name())
-#         l.append(u.get_last_name())
-#     l.append(u.get_email())
-#     l.append(u.get_phone())
-#     l.append(u.get_username())
-#     l.append(u.get_password())
-#     ll.append(l)
-#
+# contains_duplicates = len(s) != len(l)
+# print(contains_duplicates)
+# print(len(s))
+print(len(l))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+user = RandomUser()
+
+user_list = RandomUser.generate_users(100)
+ll = [["First_name", "Last_name", "Email", "Phone_number", "Username", "Password"]]
+for u in user_list:
+    l = []
+    if re.match(r'[\u0600-\u06FF]', u.get_first_name()):
+        l.append(user.get_first_name())
+        l.append(user.get_last_name())
+    else:
+        l.append(u.get_first_name())
+        l.append(u.get_last_name())
+    l.append(u.get_email())
+    l.append(u.get_phone())
+    l.append(u.get_username())
+    l.append(u.get_password())
+    ll.append(l)
+
 # # print(ll)
 # print(tabulate(ll))
 #
